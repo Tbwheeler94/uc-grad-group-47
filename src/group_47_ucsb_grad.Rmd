@@ -1,0 +1,20 @@
+---
+title: "Group 47 UCSB domestic grad enrollment"
+author: "Tom Wheeler & Grace Kumaishi"
+date: "11/23/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# Attach packages
+library(tidyverse)
+library(janitor)
+library(here)
+library(hexbin)
+```
+
+```{r}
+# Read in data
+ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv")) %>%
+  clean_names()
